@@ -34,10 +34,12 @@ const editdisplay = async(req,res) =>{
 }
 
 const editDataSave = async(req,res) => {
-    // const {id} = req.params;
-    // console.log(id);
-    await BookModel.findByIdAndUpdate(req.params.id);
-    res.send("Hello");
+    const {id} = req.params;
+    console.log(req.params);
+    // await BookModel.findByIdAndUpdate(id);
+    const mydata = await BookModel.findByIdAndUpdate(id);
+    console.log("Edit Data save")
+    res.send("HEllo")
 }
 
 module.exports = {
