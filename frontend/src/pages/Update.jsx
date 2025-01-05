@@ -36,6 +36,15 @@ const Update = () => {
     navigate(`/details/${id}`)
   }
 
+    //goto display page
+    const display = () => {
+      navigate("/display");
+    };
+    //goto search page
+    const search = () => {
+      navigate("/search");
+    };
+
   let sno=0;
   const res = mydata.map((key) => {
     sno++;
@@ -64,15 +73,42 @@ const Update = () => {
     <div>
       <Container>
         <h1>Update Page</h1>
+         {/* For jump page  */}
+         <div style={{
+          display:'flex',
+          alignItems:'center',
+          justifyContent:'start'
+        }}>
+          <i
+            class="fas fa-circle-left"
+            style={{
+              fontSize: "25px",
+              color: "#22C55E",
+              cursor: "pointer",
+            }}
+            onClick={display}
+          ></i>
+          <i
+            class="fas fa-circle-right"
+            style={{
+              fontSize: "25px",
+              color: "#22C55E",
+              cursor: "pointer",
+              marginLeft: "5px",
+            }}
+            onClick={search}
+          ></i>
+        </div>
+        <br />
         <Table bordered responsive striped variant="light" hover>
             <thead>
                 <tr>
-                <th style={{fontWeight:'bold',backgroundColor:'#2A174F',color:'white',textAlign:'center'}}>S.No</th>
-                <th style={{fontWeight:'bold',backgroundColor:'#2A174F',color:'white'}}>Auther Name</th>
-                <th style={{fontWeight:'bold',backgroundColor:'#2A174F',color:'white'}}>Book Name</th>
-                <th style={{fontWeight:'bold',backgroundColor:'#2A174F',color:'white'}}>Publish Date</th>
-                <th style={{fontWeight:'bold',backgroundColor:'#2A174F',color:'white'}}>Book Price</th>
-                <th style={{fontWeight:'bold',backgroundColor:'#2A174F',color:'white'}}>Update</th>
+                <th style={{fontWeight:'bold',backgroundColor:'#22C55E',color:'white',textAlign:'center'}}>S.No</th>
+                <th style={{fontWeight:'bold',backgroundColor:'#22C55E',color:'white'}}>Auther Name</th>
+                <th style={{fontWeight:'bold',backgroundColor:'#22C55E',color:'white'}}>Book Name</th>
+                <th style={{fontWeight:'bold',backgroundColor:'#22C55E',color:'white'}}>Publish Date</th>
+                <th style={{fontWeight:'bold',backgroundColor:'#22C55E',color:'white'}}>Book Price</th>
+                <th style={{fontWeight:'bold',backgroundColor:'#22C55E',color:'white'}}>Update</th>
                 </tr>
             </thead>
             <tbody>

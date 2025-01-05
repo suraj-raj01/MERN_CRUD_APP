@@ -35,8 +35,8 @@ const RecentActivity = () => {
           <Table bordered>
             <thead>
               <tr>
-                <th style={{backgroundColor:'whitesmoke',color:'black'}}>User</th>
-                <th style={{backgroundColor:'whitesmoke',color:'black'}}>Email</th>
+                <th style={{backgroundColor:'#22C55E',color:'white'}}>User</th>
+                <th style={{backgroundColor:'#22C55E',color:'white'}}>Email</th>
               </tr>
             </thead>
             <tbody>

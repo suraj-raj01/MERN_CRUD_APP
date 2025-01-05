@@ -1,7 +1,7 @@
 
 #navbar{
     position: sticky;
-    top: -10;
+    top: 0;
     z-index: 10;
     height: 10vh;
     box-shadow: 0px 0px 5px;
@@ -12,16 +12,17 @@
 h1{
     text-align: center;
     margin-top: 10px;
+    font-weight: bold;
     padding: 20px 0px;
-    color: #2A174F;
+    color: #22C55E;
 }
 Nav i{
-    font-size: 20px;
-    color: #2A174F;
+    font-size: 22px;
+    color: #22C55E;
 }
 
 td span i{
-    color: #2A174F;
+    color: #22C55E;
 }
 
 /* form */
@@ -130,7 +131,7 @@ td span i{
 }
 #loginform h4{
     font-weight:bold;
-    color: #2A174F;
+    color: #22C55E;
 }
 #loginform Button{
     padding: 8px;
@@ -161,7 +162,7 @@ td span i{
     font-weight: bold;
 }
 #details #box span{
-    color: #2A174F;
+    color: #22C55E;
     font-weight: 600;
     padding: 0px 10px;
     font-size: 18px;

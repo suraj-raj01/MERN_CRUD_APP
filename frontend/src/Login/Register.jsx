@@ -63,7 +63,7 @@ const Register = () => {
           onClick={handleSubmit}
         />
         <Button
-          label="Login"
+          label="Already have account"
           severity="success"
           style={{ backgroundColor: "", boxShadow: "none" }}
           onClick={login}

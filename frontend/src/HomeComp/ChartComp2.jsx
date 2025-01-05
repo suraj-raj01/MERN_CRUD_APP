@@ -10,22 +10,22 @@ const ChartComp2 = () => {
         const textColorSecondary = documentStyle.getPropertyValue('--text-color-secondary');
         const surfaceBorder = documentStyle.getPropertyValue('--surface-border');
         const data = {
-            labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+            labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July','Aug','Sep','Oct','Nov','Dec'],
             datasets: [
                 {
                     type: 'line',
                     label: 'Dataset 1',
-                    borderColor: documentStyle.getPropertyValue('--blue-500'),
+                    borderColor: documentStyle.getPropertyValue('--red-500'),
                     borderWidth: 2,
                     fill: false,
                     tension: 0.4,
-                    data: [50, 25, 12, 48, 56, 76, 42]
+                    data: [50, 25, 12, 48, 56, 76, 42,25,65,35,15,48]
                 },
                 {
                     type: 'bar',
                     label: 'Add Items',
                     backgroundColor: documentStyle.getPropertyValue('--green-500'),
-                    data: [21, 84, 24, 75, 37, 65, 34],
+                    data: [21, 84, 24, 75, 37, 65, 34,45,55,75,36,45],
                     borderColor: 'white',
                     borderWidth: 2
                 },
@@ -33,7 +33,7 @@ const ChartComp2 = () => {
                     type: 'bar',
                     label: 'Update Items',
                     backgroundColor: documentStyle.getPropertyValue('--orange-500'),
-                    data: [41, 52, 24, 74, 23, 21, 32]
+                    data: [41, 52, 24, 74, 23, 21, 32,25,36,65,42,58]
                 }
             ]
         };

@@ -27,7 +27,7 @@ const ChartComp1 = () => {
       
     };
     const options = {
-      cutout: "50%",
+      cutout: "35%",
     };
 
     setChartData(data);

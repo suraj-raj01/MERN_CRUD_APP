@@ -31,7 +31,8 @@ const Edit = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     let api = `http://localhost:8000/books/editdatasave/${id}`;
-    axios.post(api, Input).then((res) => {
+    axios.post(api,Input).then((res) => {
+      console.log(Input);
       message.success("Data updated successfully !!");
       navigate("/display");
     });
@@ -43,7 +44,7 @@ const Edit = () => {
         <h1></h1>
         <br />
         <div id="form">
-          <h4 style={{ textAlign: "center" }}>Update Form</h4>
+          <h4 style={{ textAlign: "center",color:'#22C55E' }}>Update Form</h4>
           <form>
             <br />
             <input
@@ -72,8 +73,8 @@ const Edit = () => {
             /> */}
             <Calendar
               id="calender"
-              name="publishdate"
-              value={Input.publishdate}
+              name="publish_date"
+              value={Input.publish_date}
               onChange={handleInput}
               placeholder="publish date"
             />
@@ -97,7 +98,7 @@ const Edit = () => {
             />
 
             <Button
-              label="Save Data"
+              label="Update Data"
               severity="success"
               onClick={handleSubmit}
             ></Button>

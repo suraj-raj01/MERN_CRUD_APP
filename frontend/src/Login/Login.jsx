@@ -37,7 +37,7 @@ const Login = () => {
             Forgot password?
           </NavLink>
           <Button label="Login" severity="success" />
-          <Button label="Register" severity="success" onClick={register} />
+          <Button label="Don't have account" severity="success" onClick={register} />
         </div>
       </div>
     </div>

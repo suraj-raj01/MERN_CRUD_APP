@@ -3,19 +3,17 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';
 
 const TopNavbar = () => {
-  // const navigate = useNavigate();
-  // const login = () =>{
-  //   navigate("/login");
-  // }
 
   return (
     <div>
-      <Navbar expand="lg" className="bg-body" id='navbar'>
+      <Navbar expand="lg" className="" id='navbar'>
       <Container>
-        <Navbar.Brand as={Link} to="home" style={{fontWeight:'bold',color:'#2A174F'}}>Book-Management</Navbar.Brand>
+        <Navbar.Brand as={Link} to="home" style={{fontWeight:'bold',color:'#22C55E'}}>Book-Management</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
         <Navbar.Collapse id="responsive-navbar-nav" style={{maxHeight:'400px',textAlign:'center',backgroundColor:'white',padding:'10px',margin:'20px',borderRadius:'10px'}}>
           <Nav className="me-auto">
@@ -26,24 +24,26 @@ const TopNavbar = () => {
             <Nav.Link as={Link} to="search">Search</Nav.Link>
             <NavDropdown title="Categories" id="collapsible-nav-dropdown" >
               <NavDropdown.Item as={Link} to="insert">Insert</NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="display">
-                Display
-              </NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="display">Display</NavDropdown.Item>
               <NavDropdown.Item as={Link} to="update">Update</NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="search">
-                Search Data
-              </NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="search">Search Data</NavDropdown.Item>
             </NavDropdown>
           </Nav>
-
           <Nav>
-            <div style={{display:'flex',alignItems:'center',justifyContent:'center',gap:'8px'}}>
+            <div style={{display:'flex',alignItems:'center',justifyContent:'center',gap:'5px',marginRight:'-40px'}}>
             <Nav.Link as={Link} to="search"><i class="fas fa-magnifying-glass"></i></Nav.Link>
-            <Nav.Link as={Link} to="login">
-            <i class="fas fa-circle-user"></i>
-            </Nav.Link>
+            <Nav.Link as={Link} to="login"><i class="fas fa-circle-user"></i></Nav.Link>
             </div>
           </Nav>
+          {/* <Form className="d-flex">
+            <Form.Control
+              type="search"
+              placeholder="Search"
+              className="me-2"
+              aria-label="Search"
+            />
+            <Button variant="outline-success">Search</Button>
+          </Form> */}
         </Navbar.Collapse>
       </Container>
     </Navbar> 
