@@ -13,7 +13,6 @@ const userdisplay = async(req,res) =>{
     const mydata = await UserModel.find();
     res.send(mydata);
 }
-
 module.exports = {
     userData,
     userdisplay
