@@ -30,7 +30,7 @@ const TopNavbar = () => {
             </NavDropdown>
           </Nav>
           <Nav>
-            <div style={{display:'flex',alignItems:'center',justifyContent:'center',gap:'5px',marginRight:'-40px'}}>
+            <div style={{display:'flex',alignItems:'center',justifyContent:'center',gap:'5px',marginRight:'-45px'}}>
             <Nav.Link as={Link} to="search"><i class="fas fa-magnifying-glass"></i></Nav.Link>
             <Nav.Link as={Link} to="login"><i class="fas fa-circle-user"></i></Nav.Link>
             </div>

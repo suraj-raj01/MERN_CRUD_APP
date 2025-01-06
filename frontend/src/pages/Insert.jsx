@@ -71,8 +71,8 @@ const Insert = () => {
         <br />
         <div id="form">
           <h4 style={{ textAlign: "center",color:'#22C55E'}}>Insert Form</h4>
+          <p></p>
           <form>
-            <br />
             <input
               type="text"
               required

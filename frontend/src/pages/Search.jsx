@@ -141,7 +141,7 @@ const Search = () => {
           </div>
         </div>
         {/* -------------------jump page end------------------- */}
-        <br />
+        <p></p>
         {/* ----------Data Dispaly into Table------------------- */}
         <Table bordered striped hover responsive>
           <thead>

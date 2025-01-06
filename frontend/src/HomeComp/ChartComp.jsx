@@ -45,7 +45,7 @@ const ChartComp = () => {
     }, []);
   return (
     <div>
-      <Chart type="polarArea" data={chartData} options={chartOptions} style={{ position: 'relative', width: '40vh' }} />
+      <Chart type="polarArea" data={chartData} options={chartOptions} style={{ position: 'relative', width: '45vh' }} />
     </div>
   )
 }

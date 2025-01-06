@@ -105,7 +105,7 @@ const Update = () => {
                 <tr>
                 <th style={{fontWeight:'bold',backgroundColor:'#22C55E',color:'white',textAlign:'center'}}>S.No</th>
                 <th style={{fontWeight:'bold',backgroundColor:'#22C55E',color:'white'}}>Auther Name</th>
-                <th style={{fontWeight:'bold',backgroundColor:'#22C55E',color:'white'}}>Book Name</th>
+                <th style={{fontWeight:'bold',backgroundColor:'#22C55E',color:'white'}}>Book Titles</th>
                 <th style={{fontWeight:'bold',backgroundColor:'#22C55E',color:'white'}}>Publish Date</th>
                 <th style={{fontWeight:'bold',backgroundColor:'#22C55E',color:'white'}}>Book Price</th>
                 <th style={{fontWeight:'bold',backgroundColor:'#22C55E',color:'white'}}>Update</th>

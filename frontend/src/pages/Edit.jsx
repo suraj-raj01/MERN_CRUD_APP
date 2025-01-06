@@ -38,15 +38,50 @@ const Edit = () => {
     });
   };
 
+    //goto home page
+    const home = () => {
+      navigate("/home");
+    };
+    //goto insert page
+    const insert = () => {
+      navigate("/insert");
+    };
+
   return (
     <div>
       <Container>
         <h1></h1>
+        {/* For jump page  */}
+        <div style={{
+          display:'flex',
+          alignItems:'center',
+          justifyContent:'center'
+        }}>
+          <i
+            class="fas fa-circle-left"
+            style={{
+              fontSize: "25px",
+              color: "#22C55E",
+              cursor: "pointer",
+            }}
+            onClick={home}
+          ></i>
+          <i
+            class="fas fa-circle-right"
+            style={{
+              fontSize: "25px",
+              color: "#22C55E",
+              cursor: "pointer",
+              marginLeft: "5px",
+            }}
+            onClick={insert}
+          ></i>
+        </div>
         <br />
         <div id="form">
           <h4 style={{ textAlign: "center",color:'#22C55E' }}>Update Form</h4>
+          <p></p>
           <form>
-            <br />
             <input
               type="text"
               required
@@ -102,7 +137,7 @@ const Edit = () => {
               severity="success"
               onClick={handleSubmit}
             ></Button>
-            <br />
+            <p></p>
           </form>
         </div>
         <br />

@@ -60,7 +60,7 @@ const Details = () => {
         <Button style={{width:'120px',padding:'6px'}} variant="danger" onClick={()=>{recDel(mydata._id)}}>Delete</Button>
         </div>
         </div>
-        <div id="imgbox">
+        <div id="box2">
             <img src={mydata.image_link} alt="image not found !!!" height='95%' width='75%'/>
         </div>
     </div>

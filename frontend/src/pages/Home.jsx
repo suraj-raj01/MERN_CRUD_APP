@@ -10,7 +10,7 @@ const Home = () => {
         <div id="hero">
           <div id="nav">
             <Nav as={Link} to="recent"><Button label="Recent Activity" severity="success" raised /></Nav>
-            <Nav as={Link} to="yeardata"><Button label="Year Activity" severity="success" raised /></Nav>
+            <Nav as={Link} to="yeardata"><Button label="Years Activity" severity="success" raised /></Nav>
             <Nav as={Link} to="delete"><Button label="Recent Delete" severity="success" raised /></Nav>
             <Nav as={Link} to="add"><Button label="Recently Added" severity="success" raised /></Nav>
           </div>

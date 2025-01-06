@@ -39,7 +39,7 @@ const ChartComp1 = () => {
             type="doughnut"
             data={chartData}
             options={chartOptions}
-            style={{ width: "40vh" }}
+            style={{ width: "45vh" }}
           />
     </div>
   )
