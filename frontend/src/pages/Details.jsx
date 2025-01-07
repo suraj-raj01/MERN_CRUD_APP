@@ -45,7 +45,8 @@ const Details = () => {
     <div id="details">
     <span id="remove" onClick={removePage}><i class="fas fa-delete-left"></i></span>
         <div id="box">
-        <h2 style={{color:'#22C55E'}}>About the Auther</h2><br />
+        <h2 style={{color:'#22C55E'}}>Book Details</h2>
+        <h2></h2>
         <h5>Author Name : <span>{'"'}{mydata.auther_name}{'"'}</span></h5>
         <h5>Book Title : <span>{'"'}{mydata.book_name}{'"'}</span></h5>
         <h5>Publish Date :<span>{mydata.publish_date}</span></h5>

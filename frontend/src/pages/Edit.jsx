@@ -7,6 +7,7 @@ import { Calendar } from 'primereact/calendar';
 import { useNavigate, useParams } from "react-router-dom";
 
 const Edit = () => {
+
   const { id } = useParams();
   const navigate = useNavigate();
   const [Input, setInput] = useState({});
@@ -30,7 +31,7 @@ const Edit = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    let api = `http://localhost:8000/books/editdatasave/${id}`;
+    let api = `http://localhost:8000/books/editdatasave`;
     axios.post(api,Input).then((res) => {
       console.log(Input);
       message.success("Data updated successfully !!");

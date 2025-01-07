@@ -9,14 +9,14 @@ import { useNavigate } from "react-router-dom";
 
 const Search = () => {
   const navigate = useNavigate();
-  const [user, setUser] = useState("");
+  const [book, setBook] = useState("");
   const [mydata, setMydata] = useState([]);
 
   const mySearch = (e) => {
     let stdname = e.target.value;
-    setUser(stdname);
-    let api = `http://localhost:8000/books/display`;
-    axios.get(api).then((res) => {
+    setBook(stdname);
+    let api = `http://localhost:8000/books/searchdisplay`;
+    axios.post(api,{book:book}).then((res) => {
       setMydata(res.data);
       console.log(res.data);
     });
@@ -40,16 +40,13 @@ const Search = () => {
   const home = () => {
     navigate("/home");
   };
+  
   let ans = mydata.map((key) => {
-    let str = key.book_name.toUpperCase();
-    let status = str.includes(user.toUpperCase());
-
     // date format
     let date = key.publish_date;
     let date1 = date.split("T");
     let orgdate = date1[0];
 
-    if (status) {
       return (
         <>
           <tr>
@@ -77,7 +74,6 @@ const Search = () => {
           </tr>
         </>
       );
-    }
   });
 
   return (
@@ -101,7 +97,7 @@ const Search = () => {
               placeholder="Enter book name"
               className="me-0"
               aria-label="Search"
-              value={user}
+              value={book}
               onChange={mySearch}
               style={{ borderRadius: "0px", boxShadow: "none" }}
             />
@@ -186,6 +182,7 @@ const Search = () => {
           </thead>
           <tbody>{ans}</tbody>
         </Table>
+        <br /><br/>
       </Container>
     </div>
   );

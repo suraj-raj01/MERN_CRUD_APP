@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 import {message} from "antd";
 
 const Update = () => {
+
   const [mydata, setMydata] = useState([]);
   const navigate = useNavigate();
   const loadData = () => {
@@ -49,7 +50,7 @@ const Update = () => {
   const res = mydata.map((key) => {
     sno++;
     let date = key.publish_date;
-    let newdate = date.split('T')
+    let newdate = date.split('T');
     let actualDate = newdate[0];
     return (
       <>
@@ -59,7 +60,7 @@ const Update = () => {
           <td style={{textTransform:'capitalize',cursor:'pointer'}} onClick={()=>{details(key._id)}}>{key.book_name}</td>
           <td style={{fontWeight:'bold'}}>{actualDate}</td>
           <td>{key.book_price}{".00 ₹"}</td>
-          <td>
+          <td style={{textAlign:'center'}}>
           <span style={{cursor:'pointer'}} onClick={()=>{deleteItem(key._id)}}><i class="fas fa-trash"></i></span>
           &nbsp;&nbsp;&nbsp;
           <span style={{cursor:'pointer'}} onClick={()=>{editItem(key._id)}}><i class="fas fa-pen-to-square"></i></span>
@@ -108,7 +109,7 @@ const Update = () => {
                 <th style={{fontWeight:'bold',backgroundColor:'#22C55E',color:'white'}}>Book Titles</th>
                 <th style={{fontWeight:'bold',backgroundColor:'#22C55E',color:'white'}}>Publish Date</th>
                 <th style={{fontWeight:'bold',backgroundColor:'#22C55E',color:'white'}}>Book Price</th>
-                <th style={{fontWeight:'bold',backgroundColor:'#22C55E',color:'white'}}>Update</th>
+                <th style={{fontWeight:'bold',backgroundColor:'#22C55E',color:'white',textAlign:'center'}}>Update</th>
                 </tr>
             </thead>
             <tbody>

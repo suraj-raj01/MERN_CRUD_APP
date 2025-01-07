@@ -2,10 +2,10 @@ import React from 'react'
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
+// import NavDropdown from 'react-bootstrap/NavDropdown';
 import { Link } from 'react-router-dom';
-import Form from 'react-bootstrap/Form';
-import Button from 'react-bootstrap/Button';
+// import Form from 'react-bootstrap/Form';
+// import Button from 'react-bootstrap/Button';
 
 const TopNavbar = () => {
 
@@ -17,17 +17,18 @@ const TopNavbar = () => {
         <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
         <Navbar.Collapse id="responsive-navbar-nav" style={{maxHeight:'400px',textAlign:'center',backgroundColor:'white',padding:'10px',margin:'20px',borderRadius:'10px'}}>
           <Nav className="me-auto">
-            <Nav.Link as={Link} to="home">Home</Nav.Link>
+            <Nav.Link as={Link} to="home"> Home</Nav.Link>
+            <Nav.Link as={Link} to="dashboard">Dashboard</Nav.Link>
             <Nav.Link as={Link} to="insert">Insert</Nav.Link>
             <Nav.Link as={Link} to="display">Display</Nav.Link>
             <Nav.Link as={Link} to="update">Update</Nav.Link>
             <Nav.Link as={Link} to="search">Search</Nav.Link>
-            <NavDropdown title="Categories" id="collapsible-nav-dropdown" >
+            {/* <NavDropdown title="Categories" id="collapsible-nav-dropdown" >
               <NavDropdown.Item as={Link} to="insert">Insert</NavDropdown.Item>
               <NavDropdown.Item as={Link} to="display">Display</NavDropdown.Item>
               <NavDropdown.Item as={Link} to="update">Update</NavDropdown.Item>
               <NavDropdown.Item as={Link} to="search">Search Data</NavDropdown.Item>
-            </NavDropdown>
+            </NavDropdown> */}
           </Nav>
           <Nav>
             <div style={{display:'flex',alignItems:'center',justifyContent:'center',gap:'5px',marginRight:'-45px'}}>

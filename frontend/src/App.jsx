@@ -15,6 +15,7 @@ import Register from './Login/register'
 import Login from './Login/Login'
 import YearsData from './HomeComp/YearsData'
 import UserDashboard from './Login/UserDashboard'
+import Dashboard from './pages/Dashboard'
 const App = () => {
   return (
     <div>
@@ -22,10 +23,11 @@ const App = () => {
           <Routes>
             <Route path='/' element={<Layout/>}>
               <Route index element={<Home/>}/>
-              <Route path='home' element={<Home/>}>
-                <Route index element={<RecentActivity/>}/>
-                <Route path='recent' element={<RecentActivity/>}/>
+              <Route path='home' element={<Home/>}/>
+              <Route path='dashboard' element={<Dashboard/>}>
+                <Route index element={<YearsData/>}/>
                 <Route path='yeardata' element={<YearsData/>}/>
+                <Route path='recent' element={<RecentActivity/>}/>
                 <Route path='delete' element={<RecentDelete/>}/>
                 <Route path='add' element={<RecentAdd/>}/>
               </Route>

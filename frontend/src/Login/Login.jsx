@@ -23,7 +23,7 @@ const Login = () => {
       document.getElementById("pass").focus();
     }
     else{
-      let api = `http://localhost:8000/user/userdisplay/?user_name=${user.toLowerCase()}`;
+      let api = `http://localhost:8000/user/userdisplay/?user_name=${user}`;
       axios.get(api).then((res)=>{
         if(res.data.length>=1){
           if(res.data[0].password==pass){
@@ -65,6 +65,7 @@ const Login = () => {
             onChange={(e)=>{setUser(e.target.value)}}
           />
           <InputText
+            type="password"
             id="pass"
             name="password"
             placeholder="password"

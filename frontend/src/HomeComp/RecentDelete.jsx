@@ -1,5 +1,6 @@
 import React from "react";
 import { Table } from "react-bootstrap";
+import { Empty } from 'antd';
 
 const RecentDelete = () => {
   return (
@@ -12,7 +13,7 @@ const RecentDelete = () => {
             borderRadius:'5px'
         }
       }>
-        <Table bordered striped hover>
+        <Table>
             <thead>
                 <tr>
                     <th style={{borderTopLeftRadius:'5px',backgroundColor:'#22C55E',color:'white'}}>S.No</th>
@@ -23,7 +24,13 @@ const RecentDelete = () => {
                 </tr>
             </thead>
             <tbody>
-                
+                <tr>
+                <td></td>
+                <td></td>
+                <td><center><Empty/></center></td>
+                <td></td>
+                <td></td>
+                </tr>
             </tbody>
         </Table>
       </div>

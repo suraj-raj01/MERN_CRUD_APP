@@ -1,10 +1,12 @@
-import React from 'react'
+import React from "react";
 import { useState, useEffect } from "react";
 import { Chart } from "primereact/chart";
 const ChartComp1 = () => {
-    const [chartData, setChartData] = useState({});
+  const [chartData, setChartData] = useState({});
   const [chartOptions, setChartOptions] = useState({});
-  const a = 3, b=2, c=1;
+  const a = 3,
+    b = 2,
+    c = 1;
   useEffect(() => {
     const documentStyle = getComputedStyle(document.documentElement);
     const data = {
@@ -24,7 +26,6 @@ const ChartComp1 = () => {
           ],
         },
       ],
-      
     };
     const options = {
       cutout: "35%",
@@ -36,13 +37,13 @@ const ChartComp1 = () => {
   return (
     <div>
       <Chart
-            type="doughnut"
-            data={chartData}
-            options={chartOptions}
-            style={{ width: "45vh" }}
-          />
+        type="doughnut"
+        data={chartData}
+        options={chartOptions}
+        style={{ width: "45vh" }}
+      />
     </div>
-  )
-}
+  );
+};
 
-export default ChartComp1
+export default ChartComp1;

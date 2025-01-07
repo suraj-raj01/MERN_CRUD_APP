@@ -4,7 +4,7 @@ import ChartComp1 from "./ChartComp1";
 import { Table } from "react-bootstrap";
 import axios from "axios";
 const RecentActivity = () => {
-  
+
   const[userdata,setUserData] = useState([]);
   const loadData = () =>{
     let api = `http://localhost:8000/user/userdisplay`;
@@ -31,7 +31,7 @@ const RecentActivity = () => {
     <div>
       <div id="contents">
         <div id="box" style={{display:'flex',alignItems:'center',justifyContent:'start'}}>
-        <h5 className="m-2" style={{padding:'10px',color:'#2A174F',textAlign:'center'}}>User Activities</h5>
+        <h5 className="m-2" style={{padding:'10px',color:'#22C55E',textAlign:'center'}}>User Activities</h5>
           <Table bordered>
             <thead>
               <tr>

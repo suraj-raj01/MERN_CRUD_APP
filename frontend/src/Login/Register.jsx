@@ -17,12 +17,13 @@ const Register = () => {
     console.log(Input);
   };
 
-  const handleSubmit = async() =>{
+  const handleSubmit = () =>{
     let api = `http://localhost:8000/user/userlogin`;
-    await axios.post(api,Input).then((res)=>{
+    axios.post(api,Input).then((res)=>{
       console.log(res.data);
     })
     message.success("user register successfully!!!")
+    navigate("/login")
   }
 
   const login = () => {
