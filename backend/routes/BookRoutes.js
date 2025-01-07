@@ -7,7 +7,8 @@ route.get("/display",bookController.dataDisplay);
 route.get("/details/:id",bookController.Details);
 route.post("/delrec",bookController.deleteRec);
 route.post("/editdisplay",bookController.editdisplay);
-route.post("/editdatasave/:id",bookController.editDataSave);
+route.post("/editdatasave",bookController.editDataSave);
+route.post("/searchdisplay",bookController.searchDisplay);
 
 
 module.exports = route;
