@@ -45,7 +45,8 @@ const Details = () => {
     <div id="details">
     <span id="remove" onClick={removePage}><i class="fas fa-delete-left"></i></span>
         <div id="box">
-        <h2 style={{color:'#2A174F'}}>About the Auther</h2><br />
+        <h2 style={{color:'#22C55E'}}>Book Details</h2>
+        <h2></h2>
         <h5>Author Name : <span>{'"'}{mydata.auther_name}{'"'}</span></h5>
         <h5>Book Title : <span>{'"'}{mydata.book_name}{'"'}</span></h5>
         <h5>Publish Date :<span>{mydata.publish_date}</span></h5>
@@ -56,11 +57,11 @@ const Details = () => {
             alignItems:'center',
             gap:'10px'
         }}>
-        <Button style={{width:'120px'}} variant="success" onClick={()=>{modify(mydata._id)}}>Update</Button>
-        <Button style={{width:'120px'}} variant="danger" onClick={()=>{recDel(mydata._id)}}>Delete</Button>
+        <Button style={{width:'120px',padding:'6px'}} variant="success" onClick={()=>{modify(mydata._id)}}>Update</Button>
+        <Button style={{width:'120px',padding:'6px'}} variant="danger" onClick={()=>{recDel(mydata._id)}}>Delete</Button>
         </div>
         </div>
-        <div id="imgbox">
+        <div id="box2">
             <img src={mydata.image_link} alt="image not found !!!" height='95%' width='75%'/>
         </div>
     </div>

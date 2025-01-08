@@ -45,7 +45,7 @@ const Footer = () => {
               </p>
             </MDBCol>
 
-            <MDBCol md='2' lg='2' xl='2' className='mx-auto mb-4'>
+            <MDBCol md='2' lg='2' xl='2' className='mx-auto mb-4' id='footer_anchor'>
               <h6 className='text-uppercase fw-bold mb-4'>Book Types</h6>
               <p>
                 <a href='#!' className='text-reset'>
@@ -69,7 +69,7 @@ const Footer = () => {
               </p>
             </MDBCol>
 
-            <MDBCol md='3' lg='2' xl='2' className='mx-auto mb-4'>
+            <MDBCol md='3' lg='2' xl='2' className='mx-auto mb-4' id='footer_anchor'>
               <h6 className='text-uppercase fw-bold mb-4'>Useful links</h6>
               <p>
                 <a href='#!' className='text-reset'>
@@ -97,17 +97,17 @@ const Footer = () => {
               <h6 className='text-uppercase fw-bold mb-4'>Contact</h6>
               <p>
                 <MDBIcon color='secondary' icon='home' className='me-2' />
-                New York, NY 10012, US
+                LIG-140 BHARTI NIKETAN, BHOPAL
               </p>
               <p>
                 <MDBIcon color='secondary' icon='envelope' className='me-3' />
-                bookmanagementinfo@gmail.com
+                booksinfo@gmail.com
               </p>
               <p>
-                <MDBIcon color='secondary' icon='phone' className='me-3' /> + 01 234 567 88
+                <MDBIcon color='secondary' icon='phone' className='me-3' /> + 620 654 6029
               </p>
               <p>
-                <MDBIcon color='secondary' icon='print' className='me-3' /> + 01 234 567 89
+                <MDBIcon color='secondary' icon='print' className='me-3' /> + 620 654 6029
               </p>
             </MDBCol>
           </MDBRow>
@@ -115,8 +115,8 @@ const Footer = () => {
       </section>
 
       <div className='text-center p-4' style={{ backgroundColor: 'rgba(0, 0, 0, 0.05)' }}>
-        © 2021 Copyright : 
-        <a className='text-reset fw-bold' href='https://bookmanagement.com/'> bookmanagementinfo.com
+        © 2025 Copyright : 
+        <a className='text-reset fw-bold' href='https://bookmanagement.com/'> bookmanagement.edu.com
         </a>
       </div>
     </MDBFooter>

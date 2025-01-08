@@ -9,8 +9,8 @@ const bookSchema = new mongoose.Schema({
         required:true
     },
     publish_date:{
-        type:Date,
-        defaule:Date.now()
+        type: Date,
+        default:Date.now()
     },
     image_link:{
         type:String

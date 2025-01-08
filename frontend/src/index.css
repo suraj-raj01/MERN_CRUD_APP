@@ -1,39 +1,59 @@
+#navbar {
 
-#navbar{
-    position: sticky;
-    top: -10;
     z-index: 10;
     height: 10vh;
     box-shadow: 0px 0px 5px;
 }
-#navbar a{
-    font-weight: 600;
-}
-h1{
-    text-align: center;
-    margin-top: 10px;
-    padding: 20px 0px;
-    color: #2A174F;
-}
-Nav i{
-    font-size: 20px;
-    color: #2A174F;
+
+#navbar {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
 }
 
-td span i{
-    color: #2A174F;
+#navbar a {
+    font-weight: 600;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 10px;
+    font-weight: bold;
+    padding: 20px 0px;
+    color: #22C55E;
+}
+
+Nav i {
+    font-size: 22px;
+    color: #22C55E;
+}
+
+td span i {
+    color: #22C55E;
+}
+
+/* footer */
+#footer_anchor a {
+    font-weight: 600;
+    text-decoration: none;
+}
+
+#footer_anchor p:hover {
+    color: blue;
+    text-decoration: underline;
 }
 
 /* form */
-#form{
+#form {
     width: 400px;
     border: 1px dotted;
-    box-shadow: 0px 0px 5px;
+    box-shadow: 0px 0px 3px;
     margin: auto;
     border-radius: 10px;
     padding: 20px;
 }
-#form form{
+
+#form form {
     width: 95%;
     margin: auto;
     display: flex;
@@ -42,31 +62,36 @@ td span i{
     justify-content: center;
     gap: 15px;
 }
-#form form input{
+
+#form form input {
     width: 95%;
     border-radius: 50px;
     border: none;
     box-shadow: 0px 0px 1px;
     padding: 8px 15px;
 }
-#form form Button{
+
+#form form Button {
     width: 95%;
     margin-top: 10px;
     padding: 8px;
     border-radius: 50px;
 }
-#form form #calender{
+
+#form form #calender {
     width: 95%;
 }
 
 /* Home Page */
-#hero{
+#hero {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-#hero #nav{
+
+#hero #nav {
+    margin-left: 10px;
     width: 20%;
     height: 60vh;
     display: flex;
@@ -79,27 +104,30 @@ td span i{
     border-radius: 5px;
 }
 
-#hero #nav a{
+#hero #nav a {
     text-decoration: none;
     width: 100%;
 }
-#hero #nav Button{
+
+#hero #nav Button {
     width: 80%;
     margin: auto;
     border-radius: 50px;
 }
+
 /*home outlet */
-#homeoutlet{
+#homeoutlet {
     width: 75%;
 }
 
-#contents{
+#contents {
     width: 100%;
     display: flex;
     align-self: center;
     justify-content: space-evenly;
 }
-#contents #box{
+
+#contents #box {
     height: 60vh;
     width: 32%;
     display: flex;
@@ -111,7 +139,7 @@ td span i{
 }
 
 /* login form */
-#loginform{
+#loginform {
     margin: 50px auto;
     width: 400px;
     display: flex;
@@ -123,22 +151,26 @@ td span i{
     box-shadow: 0px 0px 2px;
     border-radius: 10px;
 }
-#loginform input{
+
+#loginform input {
     padding: 8px 15px;
     width: 90%;
     border-radius: 50px;
 }
-#loginform h4{
-    font-weight:bold;
-    color: #2A174F;
+
+#loginform h4 {
+    font-weight: bold;
+    color: #22C55E;
 }
-#loginform Button{
+
+#loginform Button {
     padding: 8px;
     width: 90%;
     border-radius: 50px;
 }
+
 /* Details */
-#details{
+#details {
     width: 80vw;
     box-shadow: 0px 0px 1px;
     height: 60vh;
@@ -148,9 +180,10 @@ td span i{
     align-items: center;
     justify-content: space-evenly;
     background-color: white;
-    
+
 }
-#box{
+
+#box {
     height: 90%;
     width: 35%;
     display: flex;
@@ -160,36 +193,42 @@ td span i{
     flex-direction: column;
     font-weight: bold;
 }
-#details #box span{
-    color: #2A174F;
+
+#details #box span {
+    color: #22C55E;
     font-weight: 600;
     padding: 0px 10px;
     font-size: 18px;
     text-transform: uppercase;
 }
-#imgbox {
+
+#box2 {
     height: 100%;
     width: 35%;
     display: flex;
+    flex-direction: column;
     align-items: center;
     gap: 5px;
-    justify-content: end;
+    justify-content: center;
 }
-#imgbox img{
+
+#box2 img {
     background-position: contain;
     border: 2px solid;
     /* box-shadow: 0px 0px 10px gray; */
     border-radius: 5px;
     transition: ease-in 1s;
 }
-#imgbox img:hover{
+
+#box2 img:hover {
     box-shadow: 0px 0px 20px gray;
     border-radius: 5px;
     cursor: pointer;
     transform: scale(.96);
     transition: ease-in .5s;
 }
-#details #remove{
+
+#details #remove {
     position: relative;
     left: 89%;
     top: -195px;
@@ -199,19 +238,77 @@ td span i{
     background-color: #e02e2e;
     cursor: pointer;
 }
-#details #remove i{
+
+#details #remove i {
     color: white;
     font-size: 22px;
 }
 
-@media only screen and (max-width: 600px) {
-    #details{
+#box2 h3 {
+    margin-top: 10px;
+    width: 100%;
+}
+
+#pass-hide {
+    filter: blur(3px);
+    font-weight: normal;
+    color: red;
+}
+
+#pass-hide:hover {
+    filter: blur(0px);
+    cursor: pointer;
+}
+
+/* Home Layout */
+#home-layout {
+    background-color: #22c55e;
+    margin: auto;
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#home-layout span {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 90px;
+    font-weight: bold;
+    text-shadow: 0px 0px 10px #22C55E;
+    color: whitesmoke;
+}
+
+#home-layout span:hover {
+    color: #22C55E;
+    text-shadow: 0px 0px 10px white;
+    cursor: default;
+}
+
+#home-layout i {
+    font-size: 100px;
+    text-shadow: 0px 0px 10px #22C55E;
+    color: whitesmoke;
+}
+
+#loader{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: a;
+}
+
+@media only screen and (max-width:800px) {
+    #details {
         width: 95vw;
         box-shadow: 0px 0px 1px;
         height: 140vh;
         flex-direction: column;
     }
-    #box{
+
+    #box {
         height: 95%;
         width: 90%;
         display: flex;
@@ -221,37 +318,109 @@ td span i{
         flex-direction: column;
         font-weight: bold;
     }
-    #imgbox {
-        height: 100%;
-        width: 95%;
+
+    #box2 {
+        height: 60vh;
+        width: 45%;
         justify-content: center;
     }
-    #details #remove{
+
+    #details #remove {
         left: 43%;
         top: 4px;
     }
-    #details #remove i{
+
+    #details #remove i {
         color: white;
         font-size: 22px;
     }
-  }
 
-  @media only screen and (max-width:600px){
-    #hero{
+    #hero {
         flex-direction: column;
         gap: 20px;
     }
-    #hero #nav{
+
+    #hero #nav {
+        margin-left: 0px;
         width: 95%;
         height: 60vh;
     }
-    #contents{
+
+    #contents {
         width: 100%;
         display: flex;
         gap: 10px;
         flex-direction: column;
     }
-    #contents #box{
+
+    #contents #box {
         width: 100%;
     }
-  }
+
+    #home-layout span {
+        font-size: 60px;
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+    #details {
+        width: 95vw;
+        box-shadow: 0px 0px 1px;
+        height: 140vh;
+        flex-direction: column;
+    }
+
+    #box {
+        height: 95%;
+        width: 90%;
+        display: flex;
+        align-items: start;
+        gap: 5px;
+        justify-content: center;
+        flex-direction: column;
+        font-weight: bold;
+    }
+
+    #box2 {
+        height: 70vh;
+        width: 85%;
+        justify-content: center;
+    }
+
+    #details #remove {
+        left: 43%;
+        top: 4px;
+    }
+
+    #details #remove i {
+        color: white;
+        font-size: 22px;
+    }
+
+    #hero {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    #hero #nav {
+        margin-left: 0px;
+        width: 95%;
+        height: 60vh;
+    }
+
+    #contents {
+        width: 100%;
+        display: flex;
+        gap: 10px;
+        flex-direction: column;
+    }
+
+    #contents #box {
+        width: 100%;
+    }
+
+    #home-layout span {
+        font-size: 50px;
+    }
+}

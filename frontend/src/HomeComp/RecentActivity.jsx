@@ -3,8 +3,11 @@ import ChartComp from "./ChartComp";
 import ChartComp1 from "./ChartComp1";
 import { Table } from "react-bootstrap";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 const RecentActivity = () => {
-  
+
+  const navigate = useNavigate();
+
   const[userdata,setUserData] = useState([]);
   const loadData = () =>{
     let api = `http://localhost:8000/user/userdisplay`;
@@ -16,11 +19,15 @@ const RecentActivity = () => {
     loadData();
   },[])
 
+  const userDetails=(id)=>{
+    navigate(`/userDetails/${id}`)
+  }
+
   const res = userdata.map((key)=>{
     return(
       <>
         <tr>
-          <td style={{cursor:'text',fontWeight:'normal',textTransform:'uppercase'}}>{key.user_name}</td>
+          <td onClick={()=>{userDetails(key._id)}} style={{cursor:'pointer',fontWeight:'normal',textTransform:'uppercase'}}>{key.user_name}</td>
           <td style={{cursor:'text',fontWeight:'normal'}}>{key.user_email}</td>
         </tr>
       </>
@@ -31,12 +38,12 @@ const RecentActivity = () => {
     <div>
       <div id="contents">
         <div id="box" style={{display:'flex',alignItems:'center',justifyContent:'start'}}>
-        <h5 className="m-2" style={{padding:'10px',color:'#2A174F',textAlign:'center'}}>User Activities</h5>
+        <h5 className="m-2" style={{padding:'10px',color:'#22C55E',textAlign:'center'}}>User Activities</h5>
           <Table bordered>
             <thead>
               <tr>
-                <th style={{backgroundColor:'whitesmoke',color:'black'}}>User</th>
-                <th style={{backgroundColor:'whitesmoke',color:'black'}}>Email</th>
+                <th style={{backgroundColor:'#22C55E',color:'white'}}>User</th>
+                <th style={{backgroundColor:'#22C55E',color:'white'}}>Email</th>
               </tr>
             </thead>
             <tbody>

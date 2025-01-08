@@ -56,11 +56,11 @@ const RecentAdd = () => {
         <Table bordered hover striped>
             <thead>
                 <tr>
-                    <th style={{borderTopLeftRadius:'5px',textAlign:'center',backgroundColor:'#2A174F',color:'white'}}>S.No</th>
-                    <th style={{backgroundColor:'#2A174F',color:'white'}}>Author Name</th>
-                    <th style={{backgroundColor:'#2A174F',color:'white'}}>Book Name</th>
-                    <th style={{backgroundColor:'#2A174F',color:'white'}}>Publish Date</th>
-                    <th style={{borderTopRightRadius:'5px',backgroundColor:'#2A174F',color:'white'}}>Book Price</th>
+                    <th style={{borderTopLeftRadius:'5px',textAlign:'center',backgroundColor:'#22C55E',color:'white'}}>S.No</th>
+                    <th style={{backgroundColor:'#22C55E',color:'white'}}>Author Name</th>
+                    <th style={{backgroundColor:'#22C55E',color:'white'}}>Book Name</th>
+                    <th style={{backgroundColor:'#22C55E',color:'white'}}>Publish Date</th>
+                    <th style={{borderTopRightRadius:'5px',backgroundColor:'#22C55E',color:'white'}}>Book Price</th>
                 </tr>
             </thead>
             <tbody>

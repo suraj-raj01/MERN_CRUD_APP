@@ -7,6 +7,7 @@ import { Calendar } from 'primereact/calendar';
 import { useNavigate, useParams } from "react-router-dom";
 
 const Edit = () => {
+
   const { id } = useParams();
   const navigate = useNavigate();
   const [Input, setInput] = useState({});
@@ -30,22 +31,58 @@ const Edit = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    let api = `http://localhost:8000/books/editdatasave/${id}`;
-    axios.post(api, Input).then((res) => {
+    let api = `http://localhost:8000/books/editdatasave`;
+    axios.post(api,Input).then((res) => {
+      console.log(Input);
       message.success("Data updated successfully !!");
       navigate("/display");
     });
   };
 
+    //goto home page
+    const home = () => {
+      navigate("/home");
+    };
+    //goto insert page
+    const insert = () => {
+      navigate("/insert");
+    };
+
   return (
     <div>
       <Container>
         <h1></h1>
+        {/* For jump page  */}
+        <div style={{
+          display:'flex',
+          alignItems:'center',
+          justifyContent:'center'
+        }}>
+          <i
+            class="fas fa-circle-left"
+            style={{
+              fontSize: "25px",
+              color: "#22C55E",
+              cursor: "pointer",
+            }}
+            onClick={home}
+          ></i>
+          <i
+            class="fas fa-circle-right"
+            style={{
+              fontSize: "25px",
+              color: "#22C55E",
+              cursor: "pointer",
+              marginLeft: "5px",
+            }}
+            onClick={insert}
+          ></i>
+        </div>
         <br />
         <div id="form">
-          <h4 style={{ textAlign: "center" }}>Update Form</h4>
+          <h4 style={{ textAlign: "center",color:'#22C55E' }}>Update Form</h4>
+          <p></p>
           <form>
-            <br />
             <input
               type="text"
               required
@@ -72,8 +109,8 @@ const Edit = () => {
             /> */}
             <Calendar
               id="calender"
-              name="publishdate"
-              value={Input.publishdate}
+              name="publish_date"
+              value={Input.publish_date}
               onChange={handleInput}
               placeholder="publish date"
             />
@@ -97,11 +134,11 @@ const Edit = () => {
             />
 
             <Button
-              label="Save Data"
+              label="Update Data"
               severity="success"
               onClick={handleSubmit}
             ></Button>
-            <br />
+            <p></p>
           </form>
         </div>
         <br />
