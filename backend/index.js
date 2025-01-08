@@ -1,13 +1,17 @@
 const express = require("express");
 const app = express();
-const port = 8000;
 const bookRoutes = require("./routes/BookRoutes")
 const userRoutes = require("./routes/userRoutes");
 const cors = require("cors");
 const bodyparser = require("body-parser");
 const mongoose = require("mongoose");
+// const port = 8000;
 
-mongoose.connect("mongodb://127.0.0.1:27017/bookmanagement").then(()=>{
+require('dotenv').config();
+const DB = process.env.MYDB;
+const port = process.env.PORT || 8000;
+
+mongoose.connect(DB).then(()=>{
     console.log("database connected !!");
 })
 

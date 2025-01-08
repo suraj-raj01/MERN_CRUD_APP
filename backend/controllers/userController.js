@@ -13,7 +13,14 @@ const userdisplay = async(req,res) =>{
     const mydata = await UserModel.find();
     res.send(mydata);
 }
+
+const userDetails=async(req,res)=>{
+    const mydata = await UserModel.findById(req.params.id);
+    res.send(mydata);
+}
+
 module.exports = {
     userData,
-    userdisplay
+    userdisplay,
+    userDetails
 }
