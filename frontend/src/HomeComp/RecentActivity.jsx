@@ -3,7 +3,10 @@ import ChartComp from "./ChartComp";
 import ChartComp1 from "./ChartComp1";
 import { Table } from "react-bootstrap";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 const RecentActivity = () => {
+
+  const navigate = useNavigate();
 
   const[userdata,setUserData] = useState([]);
   const loadData = () =>{
@@ -16,11 +19,15 @@ const RecentActivity = () => {
     loadData();
   },[])
 
+  const userDetails=(id)=>{
+    navigate(`/userDetails/${id}`)
+  }
+
   const res = userdata.map((key)=>{
     return(
       <>
         <tr>
-          <td style={{cursor:'text',fontWeight:'normal',textTransform:'uppercase'}}>{key.user_name}</td>
+          <td onClick={()=>{userDetails(key._id)}} style={{cursor:'pointer',fontWeight:'normal',textTransform:'uppercase'}}>{key.user_name}</td>
           <td style={{cursor:'text',fontWeight:'normal'}}>{key.user_email}</td>
         </tr>
       </>

@@ -16,6 +16,7 @@ import Login from './Login/Login'
 import YearsData from './HomeComp/YearsData'
 import UserDashboard from './Login/UserDashboard'
 import Dashboard from './pages/Dashboard'
+import UserDetails from './Login/UserDetails'
 const App = () => {
   return (
     <div>
@@ -41,6 +42,7 @@ const App = () => {
               <Route path='register' element={<Register/>}/>
               <Route path='update' element={<Update/>}/>
               <Route path='userdashboard' element={<UserDashboard/>}/>
+              <Route path='userdetails/:id' element={<UserDetails/>}/>
             </Route>
           </Routes>
         </BrowserRouter>

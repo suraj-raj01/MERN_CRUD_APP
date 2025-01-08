@@ -1,10 +1,15 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import Container from "react-bootstrap/esm/Container";
-import {Table} from "react-bootstrap"
+import { Table } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
+
+
 const Display = () => {
+
   const [mydata, setMydata] = useState([]);
+  const [isVisible, setIsVisible] = useState(true);
+
   const navigate = useNavigate();
   const loadData = () => {
     let api = "http://localhost:8000/books/display";
@@ -17,35 +22,59 @@ const Display = () => {
     loadData();
   }, []);
 
-  const details = (id) =>{
-    navigate(`/details/${id}`)
-  }
+  useEffect(() => {
+    setTimeout(() => {
+      setIsVisible(false);
+    }, 1000);
+    setIsVisible(true);
+  }, []);
 
-    //goto insert page
-    const insert = () => {
-      navigate("/insert");
-    };
-    //goto update page
-    const update = () => {
-      navigate("/update");
-    };
+  const details = (id) => {
+    navigate(`/details/${id}`);
+  };
 
-  let sno=0;
+  //goto insert page
+  const insert = () => {
+    navigate("/insert");
+  };
+  //goto update page
+  const update = () => {
+    navigate("/update");
+  };
+
+  let sno = 0;
   const res = mydata.map((key) => {
     sno++;
     let date = key.publish_date;
-    let newdate = date.split('T')
+    let newdate = date.split("T");
     let actualDate = newdate[0];
     // let actualDate = newdate1.reverse();
-    
+
     return (
       <>
         <tr>
-          <td style={{textAlign:'center',fontWeight:'bold'}}>{sno}</td>
-          <td style={{textTransform:'capitalize',cursor:'pointer'}} onClick={()=>{details(key._id)}}>{key.auther_name}</td>
-          <td style={{textTransform:'capitalize',cursor:'pointer'}} onClick={()=>{details(key._id)}}>{key.book_name}</td>
-          <td style={{fontWeight:'bold'}}>{actualDate}</td>
-          <td>{key.book_price}{".00 ₹"}</td>
+          <td style={{ textAlign: "center", fontWeight: "bold" }}>{sno}</td>
+          <td
+            style={{ textTransform: "capitalize", cursor: "pointer" }}
+            onClick={() => {
+              details(key._id);
+            }}
+          >
+            {key.auther_name}
+          </td>
+          <td
+            style={{ textTransform: "capitalize", cursor: "pointer" }}
+            onClick={() => {
+              details(key._id);
+            }}
+          >
+            {key.book_name}
+          </td>
+          <td style={{ fontWeight: "bold" }}>{actualDate}</td>
+          <td>
+            {key.book_price}
+            {".00 ₹"}
+          </td>
         </tr>
       </>
     );
@@ -55,12 +84,14 @@ const Display = () => {
     <div>
       <Container>
         <h1>Display Page</h1>
-       {/* For jump page  */}
-       <div style={{
-          display:'flex',
-          alignItems:'center',
-          justifyContent:'start'
-        }}>
+        {/* For jump page  */}
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "start",
+          }}
+        >
           <i
             class="fas fa-circle-left"
             style={{
@@ -83,20 +114,71 @@ const Display = () => {
         </div>
         <br />
         <Table bordered responsive striped variant="light" hover>
-            <thead>
-                <tr>
-                <th style={{fontWeight:'bold',backgroundColor:'#22C55E',color:'white',textAlign:'center'}}>S.No</th>
-                <th style={{fontWeight:'bold',backgroundColor:'#22C55E',color:'white'}}>Auther Name</th>
-                <th style={{fontWeight:'bold',backgroundColor:'#22C55E',color:'white'}}>Book Titles</th>
-                <th style={{fontWeight:'bold',backgroundColor:'#22C55E',color:'white'}}>Publish Date</th>
-                <th style={{fontWeight:'bold',backgroundColor:'#22C55E',color:'white'}}>Book Price</th>
-                </tr>
-            </thead>
-            <tbody>
-                {res}
-            </tbody>
+          <thead>
+            <tr>
+              <th
+                style={{
+                  fontWeight: "bold",
+                  backgroundColor: "#22C55E",
+                  color: "white",
+                  textAlign: "center",
+                }}
+              >
+                S.No
+              </th>
+              <th
+                style={{
+                  fontWeight: "bold",
+                  backgroundColor: "#22C55E",
+                  color: "white",
+                }}
+              >
+                Auther Name
+              </th>
+              <th
+                style={{
+                  fontWeight: "bold",
+                  backgroundColor: "#22C55E",
+                  color: "white",
+                }}
+              >
+                Book Titles
+              </th>
+              <th
+                style={{
+                  fontWeight: "bold",
+                  backgroundColor: "#22C55E",
+                  color: "white",
+                }}
+              >
+                Publish Date
+              </th>
+              <th
+                style={{
+                  fontWeight: "bold",
+                  backgroundColor: "#22C55E",
+                  color: "white",
+                }}
+              >
+                Book Price
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <td></td>
+            <td></td>
+            {isVisible ? 
+            (
+              <span id="loader">
+                <img src="https://ima.alfatango.org/images/loader.gif" alt="" height='60px' width='60px' />
+              </span>
+            ): (res)}
+            <td></td>
+            <td></td>
+          </tbody>
         </Table>
-        <br /><br />
+        <br />
+        <br />
       </Container>
     </div>
   );

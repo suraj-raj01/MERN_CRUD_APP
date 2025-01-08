@@ -292,6 +292,14 @@ td span i {
     color: whitesmoke;
 }
 
+#loader{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: a;
+}
+
 @media only screen and (max-width:800px) {
     #details {
         width: 95vw;
@@ -353,6 +361,7 @@ td span i {
         font-size: 60px;
     }
 }
+
 
 @media only screen and (max-width: 600px) {
     #details {
