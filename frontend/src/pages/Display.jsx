@@ -165,16 +165,7 @@ const Display = () => {
             </tr>
           </thead>
           <tbody>
-            <td></td>
-            <td></td>
-            {isVisible ? 
-            (
-              <span id="loader">
-                <img src="https://ima.alfatango.org/images/loader.gif" alt="" height='60px' width='60px' />
-              </span>
-            ): (res)}
-            <td></td>
-            <td></td>
+            {res}
           </tbody>
         </Table>
         <br />

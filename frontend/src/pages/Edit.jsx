@@ -53,11 +53,13 @@ const Edit = () => {
       <Container>
         <h1></h1>
         {/* For jump page  */}
-        <div style={{
-          display:'flex',
-          alignItems:'center',
-          justifyContent:'center'
-        }}>
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
           <i
             class="fas fa-circle-left"
             style={{
@@ -80,7 +82,7 @@ const Edit = () => {
         </div>
         <br />
         <div id="form">
-          <h4 style={{ textAlign: "center",color:'#22C55E' }}>Update Form</h4>
+          <h4 style={{ textAlign: "center", color: "#22C55E" }}>Update Form</h4>
           <p></p>
           <form>
             <input
