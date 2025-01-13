@@ -277,27 +277,28 @@ td span i {
     font-size: 90px;
     font-weight: bold;
     text-shadow: 0px 0px 5px #22C55E;
-    color: whitesmoke;
+    color: #22C55E;
 }
 
 #home-layout span:hover {
-    color: #22C55E;
-    text-shadow: 0px 0px 5px black;
+    color: #fff;
+    text-shadow: 0px 0px 5px #22C55E;
     cursor: default;
 }
 
 #home-layout i {
     font-size: 100px;
-    text-shadow: 0px 0px 10px #22C55E;
-    color: whitesmoke;
+    text-shadow: 0px 0px 5px #22C55E;
+    color: #22C55E;
 }
 
-#loader{
+#loader {
     margin-top: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: a;
+    background-color: white;
 }
 
 @media only screen and (max-width:800px) {
