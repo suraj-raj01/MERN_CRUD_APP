@@ -25,6 +25,7 @@ const Login = () => {
     else{
       let api = `http://localhost:8000/user/userdisplay/?user_name=${user}`;
       axios.get(api).then((res)=>{
+        console.log(res.user_name);
         if(res.data.length>=1){
           if(res.data[0].password==pass){
             localStorage.setItem("username",res.data[0].user_name.toUpperCase());
@@ -34,12 +35,11 @@ const Login = () => {
             message.success(`Welcome Mr. "${res.data[0].user_name.toUpperCase()}"`);
             navigate("/userdashboard")
             setUser("");
-            setPass("")
+            setPass("");
           }
           else{
             message.error("incorrect password !!!")
           }
-          
         }else{
           message.error("username not found !!!")
         }

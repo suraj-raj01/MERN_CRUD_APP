@@ -9,7 +9,7 @@ const Home = () => {
             <span>o</span>
             <span>o</span>
             <span>k</span>
-            <span>&nbsp;</span>
+            <span> </span>
             <span>M</span>
             <span>a</span>
             <span>n</span>

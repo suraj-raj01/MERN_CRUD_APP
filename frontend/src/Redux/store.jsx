@@ -3,7 +3,6 @@ import CounterReducer from "../Redux/Slice"
 
 export const store = configureStore({
   reducer: {
-    del:CounterReducer,
-    update:CounterReducer
+    del:CounterReducer
   },
 })

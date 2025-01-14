@@ -46,8 +46,8 @@ td span i {
 /* form */
 #form {
     width: 400px;
-    border: 1px dotted;
-    box-shadow: 0px 0px 3px;
+    border: 1px dotted #22C55E;
+    box-shadow: 0px 0px 2px #22C55E;
     margin: auto;
     border-radius: 10px;
     padding: 20px;
@@ -148,7 +148,7 @@ td span i {
     justify-content: center;
     gap: 20px;
     padding: 40px 10px;
-    box-shadow: 0px 0px 2px;
+    box-shadow: 0px 0px 2px #22C55E;
     border-radius: 10px;
 }
 
@@ -283,7 +283,7 @@ td span i {
 #home-layout span:hover {
     color: #fff;
     text-shadow: 0px 0px 5px #22C55E;
-    cursor: default;
+    cursor:progress;
 }
 
 #home-layout i {
@@ -343,7 +343,7 @@ td span i {
 
     #hero #nav {
         margin-left: 0px;
-        width: 95%;
+        width: 75%;
         height: 60vh;
     }
 
@@ -406,7 +406,7 @@ td span i {
 
     #hero #nav {
         margin-left: 0px;
-        width: 95%;
+        width: 75%;
         height: 60vh;
     }
 

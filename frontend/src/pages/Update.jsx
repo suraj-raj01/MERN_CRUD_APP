@@ -21,12 +21,15 @@ const Update = () => {
   }, []);
 
   //delete items
-  const deleteItem = (id) =>{
+  const deleteItem = async(id) =>{
     let api = `http://localhost:8000/books/delrec`;
-    axios.post(api,{id:id}).then((res)=>{
+    try {
+      let response = await axios.post(api,{id:id});
       message.success("data deleted successfully")
       loadData();
-    })
+    } catch (error) {
+      message.error(error.response.data.msg);
+    }
   }
   //edit items
   const editItem = (id) =>{
@@ -59,7 +62,7 @@ const Update = () => {
           <td style={{textTransform:'capitalize',cursor:'pointer'}} onClick={()=>{details(key._id)}}>{key.auther_name}</td>
           <td style={{textTransform:'capitalize',cursor:'pointer'}} onClick={()=>{details(key._id)}}>{key.book_name}</td>
           <td style={{fontWeight:'bold'}}>{actualDate}</td>
-          <td>{key.book_price}{".00 ₹"}</td>
+          <td style={{textAlign:'center'}}>{key.book_price}{".00 ₹"}</td>
           <td style={{textAlign:'center'}}>
           <span style={{cursor:'pointer'}} onClick={()=>{deleteItem(key._id)}}><i class="fas fa-trash"></i></span>
           &nbsp;&nbsp;&nbsp;
@@ -108,7 +111,7 @@ const Update = () => {
                 <th style={{fontWeight:'bold',backgroundColor:'#22C55E',color:'white'}}>Auther Name</th>
                 <th style={{fontWeight:'bold',backgroundColor:'#22C55E',color:'white'}}>Book Titles</th>
                 <th style={{fontWeight:'bold',backgroundColor:'#22C55E',color:'white'}}>Publish Date</th>
-                <th style={{fontWeight:'bold',backgroundColor:'#22C55E',color:'white'}}>Book Price</th>
+                <th style={{fontWeight:'bold',backgroundColor:'#22C55E',color:'white', textAlign:'center'}}>Book Price</th>
                 <th style={{fontWeight:'bold',backgroundColor:'#22C55E',color:'white',textAlign:'center'}}>Update</th>
                 </tr>
             </thead>

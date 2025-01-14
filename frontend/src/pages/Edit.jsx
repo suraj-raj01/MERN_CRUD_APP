@@ -12,11 +12,14 @@ const Edit = () => {
   const navigate = useNavigate();
   const [Input, setInput] = useState({});
 
-  const loadData = () => {
+  const loadData = async() => {
     let api = `http://localhost:8000/books/editdisplay`;
-    axios.post(api, { id: id }).then((res) => {
-      setInput(res.data);
-    });
+    try {
+      const response = await axios.post(api, { id: id });
+      setInput(response.data);
+    } catch (error) {
+      message.error(error.response.data.msg);
+    }
   };
   useEffect(() => {
     loadData();
@@ -29,14 +32,16 @@ const Edit = () => {
     console.log(Input);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async(e) => {
     e.preventDefault();
     let api = `http://localhost:8000/books/editdatasave`;
-    axios.post(api,Input).then((res) => {
-      console.log(Input);
+    try {
+      const response = await axios.post(api,Input);
       message.success("Data updated successfully !!");
       navigate("/display");
-    });
+    } catch (error) {
+      message.error(error.response.data.msg);
+    }
   };
 
     //goto home page
