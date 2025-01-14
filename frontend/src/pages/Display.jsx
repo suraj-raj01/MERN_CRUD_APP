@@ -70,8 +70,8 @@ const Display = () => {
           >
             {key.book_name}
           </td>
-          <td style={{ fontWeight: "bold" }}>{actualDate}</td>
-          <td>
+          <td style={{ fontWeight: "bold", textAlign:'center'}}>{actualDate}</td>
+          <td style={{ textAlign:'center'}}>
             {key.book_price}
             {".00 ₹"}
           </td>
@@ -149,6 +149,7 @@ const Display = () => {
                   fontWeight: "bold",
                   backgroundColor: "#22C55E",
                   color: "white",
+                  textAlign:'center'
                 }}
               >
                 Publish Date
@@ -158,6 +159,7 @@ const Display = () => {
                   fontWeight: "bold",
                   backgroundColor: "#22C55E",
                   color: "white",
+                  textAlign:'center'
                 }}
               >
                 Book Price

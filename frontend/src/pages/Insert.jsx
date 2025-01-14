@@ -16,13 +16,15 @@ const Insert = () => {
     console.log(Input);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async(e) => {
     e.preventDefault();
     let api = "http://localhost:8000/books/datasave";
-    axios.post(api, Input).then((res) => {
-      console.log(res.data);
-    });
-    message.success("Data inserted successfully !!");
+    try {
+      const response = await axios.post(api, Input);
+      message.success("Data inserted successfully !!");
+    } catch (error) {
+      message.error(error.response.data.msg)
+    }
     navigate("/display");
   };
 
