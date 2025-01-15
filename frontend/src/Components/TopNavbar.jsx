@@ -22,7 +22,7 @@ const TopNavbar = () => {
             <Nav.Link as={Link} to="insert">Insert</Nav.Link>
             <Nav.Link as={Link} to="display">Display</Nav.Link>
             <Nav.Link as={Link} to="update">Update</Nav.Link>
-            <Nav.Link as={Link} to="search">Search</Nav.Link>
+            {/* <Nav.Link as={Link} to="search">Search</Nav.Link> */}
             {/* <NavDropdown title="Categories" id="collapsible-nav-dropdown" >
               <NavDropdown.Item as={Link} to="insert">Insert</NavDropdown.Item>
               <NavDropdown.Item as={Link} to="display">Display</NavDropdown.Item>
@@ -31,7 +31,7 @@ const TopNavbar = () => {
             </NavDropdown> */}
           </Nav>
           <Nav>
-            <div style={{display:'flex',alignItems:'center',justifyContent:'center',gap:'5px',marginRight:'-45px'}}>
+            <div id='search-login'>
             <Nav.Link as={Link} to="search"><i class="fas fa-magnifying-glass"></i></Nav.Link>
             <Nav.Link as={Link} to="login"><i class="fas fa-circle-user"></i></Nav.Link>
             </div>

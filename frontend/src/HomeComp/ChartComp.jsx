@@ -21,7 +21,7 @@ const ChartComp = () => {
                     label: 'My dataset'
                 }
             ],
-            labels: ['Red', 'Green', 'Yellow', 'Grey', 'Blue']
+            labels: ['Delete', 'Add', 'Edit', 'Update', 'Cancel']
         };
         const options = {
             plugins: {

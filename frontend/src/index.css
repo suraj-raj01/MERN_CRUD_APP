@@ -301,6 +301,14 @@ td span i {
     background-color: white;
 }
 
+#search-login{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-right: -35px;
+}
+
 @media only screen and (max-width:800px) {
     #details {
         width: 95vw;
@@ -360,6 +368,9 @@ td span i {
 
     #home-layout span {
         font-size: 60px;
+    }
+    #search-login{
+        margin-right: 0px;
     }
 }
 
