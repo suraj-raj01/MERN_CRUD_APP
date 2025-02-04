@@ -10,9 +10,13 @@ const DataSave = async(req,res)=>{
             image_link:imagelink,
             book_price:bookprice
         }) 
-        res.status(200).send({msg:"Data Inserted Successfully!!"});
+        if(bookprice>499){
+            res.status(200).send({msg:"Data Inserted Successfully!!"});
+        }else{
+            res.status(400).send({msg:"Book Price Should be greater than 500"})
+        }
     } catch (error) {
-        res.status(400).send({msg:"Data Insertion Failed"});
+        res.status(400).send({msg:"Data Insertion Failed !!"});
     }
 }
 
@@ -55,7 +59,11 @@ const editDataSave = async(req,res) => {
             image_link:image_link,
             book_price:book_price
         })
-        res.status(200).send({msg:"Data Updated Successfully"});
+        if(book_price>=500){
+            res.status(200).send({msg:"Data Updated Successfully"});
+        }else{
+            res.status(400).send({msg:"Book Price Should be greater than 500"})
+        }
     } catch (error) {
         res.status(400).send({msg:"Data update failed !!"});
     }

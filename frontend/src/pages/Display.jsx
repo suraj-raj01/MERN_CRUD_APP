@@ -130,7 +130,7 @@ const Display = () => {
                 style={{
                   fontWeight: "bold",
                   backgroundColor: "#22C55E",
-                  color: "white",
+                  color: "white"
                 }}
               >
                 Auther Name

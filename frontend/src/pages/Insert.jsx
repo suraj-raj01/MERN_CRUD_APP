@@ -21,11 +21,11 @@ const Insert = () => {
     let api = "http://localhost:8000/books/datasave";
     try {
       const response = await axios.post(api, Input);
-      message.success("Data inserted successfully !!");
+      message.success(response.data.msg);
+      navigate("/display");
     } catch (error) {
       message.error(error.response.data.msg)
     }
-    navigate("/display");
   };
 
   //goto home page
