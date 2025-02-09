@@ -10,7 +10,7 @@ const Update = () => {
   const [mydata, setMydata] = useState([]);
   const navigate = useNavigate();
   const loadData = () => {
-    let api = "http://localhost:8000/books/display";
+    let api = "https://mern-crud-app-c493.onrender.com/books/display";
     axios.get(api).then((res) => {
       setMydata(res.data);
     });
@@ -22,7 +22,7 @@ const Update = () => {
 
   //delete items
   const deleteItem = async(id) =>{
-    let api = `http://localhost:8000/books/delrec`;
+    let api = `https://mern-crud-app-c493.onrender.com/books/delrec`;
     try {
       let response = await axios.post(api,{id:id});
       message.success("data deleted successfully")

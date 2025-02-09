@@ -10,7 +10,7 @@ const RecentActivity = () => {
 
   const[userdata,setUserData] = useState([]);
   const loadData = () =>{
-    let api = `http://localhost:8000/user/userdisplay`;
+    let api = `https://mern-crud-app-c493.onrender.com/user/userdisplay`;
     axios.get(api).then((res)=>{
       setUserData(res.data);
     })

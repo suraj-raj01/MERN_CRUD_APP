@@ -15,7 +15,7 @@ const Search = () => {
   const mySearch = (e) => {
     let stdname = e.target.value;
     setBook(stdname);
-    let api = `http://localhost:8000/books/searchdisplay`;
+    let api = `https://mern-crud-app-c493.onrender.com/books/searchdisplay`;
     axios.post(api,{book:book}).then((res) => {
       setMydata(res.data);
       console.log(res.data);

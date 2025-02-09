@@ -7,7 +7,7 @@ const UserDetails = () => {
   const [mydata, setMydata] = useState({});
 
   const loadData = () => {
-    let api = `http://localhost:8000/user/userdetails/${id}`;
+    let api = `https://mern-crud-app-c493.onrender.com/user/userdetails/${id}`;
     axios.get(api).then((res) => {
       setMydata(res.data);
       console.log(res.data);
