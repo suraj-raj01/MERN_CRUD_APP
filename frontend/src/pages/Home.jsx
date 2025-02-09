@@ -5,7 +5,7 @@ const Home = () => {
         <div id="home-layout">
         <div><i class="fas fa-book-open-reader"></i></div>
             <div>
-            <span>B</span>
+            {/* <span>B</span>
             <span>o</span>
             <span>o</span>
             <span>k</span>
@@ -19,7 +19,8 @@ const Home = () => {
             <span>m</span>
             <span>e</span>
             <span>n</span>
-            <span>t</span>
+            <span>t</span> */}
+            <h1>Book Management</h1>
             </div>
         </div>
     </div>

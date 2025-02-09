@@ -35,6 +35,7 @@ const ChartComp1 = () => {
   return (
     <div>
       <Chart
+        id="chart"
         type="doughnut"
         data={chartData}
         options={chartOptions}
