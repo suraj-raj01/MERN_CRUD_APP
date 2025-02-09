@@ -455,10 +455,10 @@ td span i {
         flex-direction: column;
         font-weight: bold;
     }
-    #box Table td{
+    Table td{
         font-size: 10px;
     }
-    #box Table th{
+    Table th{
         font-size: 10px;
     }
     #box h5{
@@ -517,5 +517,11 @@ td span i {
         align-items: center;
         justify-content: center;
         height: 300px;
+    }
+    #form{
+        width: 300px;
+    }
+    #loginform{
+        width: 300px;
     }
 }
