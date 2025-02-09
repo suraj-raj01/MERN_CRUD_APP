@@ -13,7 +13,7 @@ const Edit = () => {
   const [Input, setInput] = useState({});
 
   const loadData = async() => {
-    let api = `http://localhost:8000/books/editdisplay`;
+    let api = `https://mern-crud-app-c493.onrender.com/books/editdisplay`;
     try {
       const response = await axios.post(api, { id: id });
       setInput(response.data);
@@ -34,7 +34,7 @@ const Edit = () => {
 
   const handleSubmit = async(e) => {
     e.preventDefault();
-    let api = `http://localhost:8000/books/editdatasave`;
+    let api = `https://mern-crud-app-c493.onrender.com/books/editdatasave`;
     try {
       const response = await axios.post(api,Input);
       message.success("Data updated successfully !!");

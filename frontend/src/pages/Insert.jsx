@@ -18,7 +18,7 @@ const Insert = () => {
 
   const handleSubmit = async(e) => {
     e.preventDefault();
-    let api = "http://localhost:8000/books/datasave";
+    let api = "https://mern-crud-app-c493.onrender.com/books/datasave";
     try {
       const response = await axios.post(api, Input);
       message.success(response.data.msg);

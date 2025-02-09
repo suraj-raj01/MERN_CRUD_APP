@@ -7,7 +7,7 @@ const RecentAdd = () => {
   const [mydata, setMydata] = useState([]);
   const navigate = useNavigate();
   const loadData = () => {
-    let api = "http://localhost:8000/books/display";
+    let api = "https://mern-crud-app-c493.onrender.com/books/display";
     axios.get(api).then((res) => {
       setMydata(res.data);
     });

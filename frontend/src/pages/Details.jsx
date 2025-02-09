@@ -8,7 +8,7 @@ const Details = () => {
   const [mydata, setData] = useState({});
   const {id} = useParams();
   const loadData = () => {
-    let api = `http://localhost:8000/books/details/${id}`;
+    let api = `https://mern-crud-app-c493.onrender.com/books/details/${id}`;
     axios.get(api).then((res) => {
       setData(res.data);
       console.log(res.data);
@@ -25,7 +25,7 @@ const Details = () => {
   }
   // delete data
   const recDel = (id) => {
-    let api = `http://localhost:8000/books/delrec`;
+    let api = `https://mern-crud-app-c493.onrender.com/books/delrec`;
     axios.post(api,{id:id}).then((res)=>{
       console.log("data deleted!!")
       message.success("data deleted successfully")
