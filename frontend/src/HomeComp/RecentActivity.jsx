@@ -39,7 +39,7 @@ const RecentActivity = () => {
       <div id="contents">
         <div id="box" style={{display:'flex',alignItems:'center',justifyContent:'start'}}>
         <h5 className="m-2" style={{padding:'10px',color:'#22C55E',textAlign:'center'}}>User Activities</h5>
-          <Table bordered>
+          <Table bordered responsive striped style={{width:'100%'}}>
             <thead>
               <tr>
                 <th style={{backgroundColor:'#22C55E',color:'white'}}>User</th>

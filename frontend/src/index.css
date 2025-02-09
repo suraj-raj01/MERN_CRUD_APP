@@ -436,3 +436,86 @@ td span i {
         font-size: 50px;
     }
 }
+
+@media only screen and (max-width: 380px) {
+    #details {
+        width: 95vw;
+        box-shadow: 0px 0px 1px;
+        height: 140vh;
+        flex-direction: column;
+    }
+
+    #box {
+        height: 95%;
+        width: 95%;
+        display: flex;
+        align-items: start;
+        gap: 5px;
+        justify-content: center;
+        flex-direction: column;
+        font-weight: bold;
+    }
+    #box Table td{
+        font-size: 10px;
+    }
+    #box Table th{
+        font-size: 10px;
+    }
+    #box h5{
+        font-size: 12px;
+    }
+    #box span{
+        font-size: 12px;
+    }
+    #box2 {
+        height: 70vh;
+        width: 95%;
+        justify-content: center;
+    }
+
+    #details #remove {
+        left: 43%;
+        top: 4px;
+    }
+
+    #details #remove i {
+        color: white;
+        font-size: 22px;
+    }
+
+    #hero {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    #hero #nav {
+        margin-left: 0px;
+        width: 75%;
+        height: 40vh;
+    }
+
+    #contents {
+        width: 100%;
+        display: flex;
+        gap: 10px;
+        flex-direction: column;
+    }
+
+    #contents #box {
+        width: 100%;
+        height: 40vh;
+    }
+
+    #home-layout span {
+        font-size: 50px;
+    }
+    #recent-delete Table th,td{
+        font-size: 8px;
+    }
+    #chart{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 300px;
+    }
+}

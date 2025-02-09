@@ -42,7 +42,7 @@ const RecentAdd = () => {
   });
   return (
     <div>
-      <div style={
+      <div id="recent-delete" style={
         {
             width:'100%',
             height:'60vh',
