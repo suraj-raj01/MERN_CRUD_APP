@@ -91,7 +91,7 @@ const Search = () => {
             justifyContent: "space-between",
           }}
         >
-          <Form className="d-flex" style={{ width: "350px" }}>
+          <Form className="d-flex"style={{ width: "350px" }}>
             <Form.Control
               type="search"
               placeholder="Enter book name"
