@@ -446,7 +446,7 @@ td span i {
     }
 
     #box {
-        height: 95%;
+        height: 75%;
         width: 95%;
         display: flex;
         align-items: start;
@@ -462,9 +462,6 @@ td span i {
         font-size: 10px;
     }
     #box h5{
-        font-size: 12px;
-    }
-    #box span{
         font-size: 12px;
     }
     #box2 {
